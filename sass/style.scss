@@ -1,0 +1,331 @@
+// reset sass start
+@import 'reset';
+// reset sass end
+// mixin sass start
+@import 'mixin';
+// mixin sass end
+// variable sass start
+@import 'variable';
+// variable sass end
+// extend_rule sass start
+@import 'extend_rule';
+// extend_rule sass end
+
+
+
+// banner section & nav section css start
+#banner{
+    height: 700px;
+    background: $bg-color-blue url(../images/admin.jpg) no-repeat !important;
+    background-position: right !important;
+    background-size: 50% !important;
+    position: relative;
+    z-index: 1;
+    // height: 100vh;
+
+    nav{
+        .navbar-brand{
+            font-size: 30px;
+            font-weight: 700;
+            color: $white-color;
+            font-family: 'Poppins', sans-serif;
+        }
+        ul{
+            li{
+                a{
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-family: 'Poppins', sans-serif;
+                    color: $white-color;
+                    transition: all .4s linear;
+                    padding: 10px 20px;
+                    &:hover{
+                        color: $purple-color;
+                    }
+                }
+            }
+        }
+
+        .contact_btn {
+           a{
+            color: $white-color;
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            padding: 10px 20px;
+            transition: all .5s linear;
+           }
+           &:hover a{
+            @include email-btn;
+           }
+        }
+    }
+
+    // banner content start
+    .banner_content{
+        h2{
+            padding-top: 100px;
+            font-size: 82px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: $white-color;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(255, 255, 255, .5);
+            padding-top: 45px;
+
+            span{
+                color: $white-color;
+            }
+        }
+
+        .banner_btn{
+            a{
+                color: $white-color;
+                font-size: 20px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                padding: 10px 20px;
+                transition: all .5s linear;
+                margin-right: 5px;
+                padding: 30px 0px;
+                &:hover{
+                    @include email-btn;
+                }
+
+                i{
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
+#banner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    background-position: right;
+    background-size: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+// banner section & nav section css end
+
+// logo css start
+#logo{
+    padding: 50px 0;
+    background-color: $dark-bg;
+}
+// logo css end
+
+// experience css start
+#experience{
+    background-color: $purple-darkish;
+    padding: 100px 0 100px;
+
+    .experience_info{
+        p{
+            span{
+                color: $purple-color;
+                font-size: 70px;
+                font-family: 'Playfair Display', serif;
+                font-weight: bold;
+            }
+            font-size: 40px;
+            color: $white-color;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+        }
+    }
+
+    .experience_details{
+        h4{
+            font-size: 40px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: $white-color;
+            text-align: center;
+            padding-bottom: 34px;
+        }
+
+        .experience_info_box{
+            
+         .box-content{
+             height: 290px;
+             background-color: $light-color;
+             position: relative;
+             transition: all .5s linear;
+             .exp_icon{
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                i{
+                    font-size: 20px;
+                    color: $dark-bg;
+                    transition: all .5s linear;
+                }
+                p{ 
+                    font-family:'Poppins', sans-serif;
+                    font-size: 20px;
+                    color: $dark-bg;  
+                    font-weight: bold;
+                    transition: all .5s linear;
+                }
+             }
+             &:hover{
+                 background-color: $purple-color;
+                 margin:-10px 0 -10px;
+             }
+             &:hover .exp_icon i,
+             &:hover .exp_icon p{
+                 color: $white-color;
+             }
+         }
+        }
+    }
+}
+// experiencs css end
+
+// satisfaction section css start
+#satisfaction{
+    padding: 100px 0px 100px;
+    background-color: $bg-color-blue;
+
+    .satisfaction_content{
+        span{
+            font-size: 100px;
+            font-weight: bold;
+            color: $light-color;
+            display: block;
+        }
+        p{
+            span{
+                font-size: 65px;
+                font-weight: bold;
+                color: $light-color;
+                display: block;
+            }
+            font-size: 20px;
+            color: $white-color;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        .arrow{
+            i{  
+                padding-top: 60px;
+                color: $purple-color;
+                font-size: 40px;
+                margin-right: 20px;
+                padding-left: 5px;
+                transition: all linear .5s;
+                &:hover{
+                    color: $purple-darkish;
+                }
+            }
+            
+        }
+    }
+
+    .clients{
+        p{
+            font-size: 30px;
+            font-family:'Playfair Display', serif;
+            font-weight: 700;
+            color: $white-color;
+
+            span{
+                color: $purple-color;
+                font-size: 50px;
+            }
+        }
+    }
+}
+// satisfaction section css end
+
+// contact section css start
+#contact{
+    background-color: $dark-bg;
+    padding: 100px 0 100px;
+
+    .contact_content{
+        p{
+            font-size: 100px;
+            font-weight: 700;
+            color: $white-color;
+            font-family: 'Poppins', sans-serif;
+        }
+        .social_icon{
+            ul{
+                li{
+                    a{
+                        i{
+                            font-size: 25px;
+                            margin: 16px;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_form{
+        form{
+            label{
+                font-size: 30px;
+                font-weight: medium;
+                font-family: 'Poppins', sans-serif;
+                color: $white-color;
+            }
+            input,textarea{
+                background-color: transparent;
+                border-color: transparent;
+                border-bottom: 1px solid $white-color;
+                margin-bottom: 20px;
+                color: $white-color;
+                resize: none;
+            }
+            input[type="submit"]{
+                font-size: 30px;
+                font-weight: medium;
+                font-family: 'Poppins', sans-serif;
+                background-color: transparent;
+                color: $purple-color;
+                text-transform: capitalize;
+                border-bottom: transparent;
+                font-weight: bold;
+            }
+            i{
+                color: $purple-color;
+                font-size: 25px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+// contact section css end
+
+// footer section css start
+footer{
+    background-color: $dark-bg;
+    padding: 30px 0 30px;
+    p{
+        font-size: 20px;
+        font-weight: medium;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+        
+
+        span{
+            color: $white-color;
+        }
+    }
+}
+// footer section css vend
